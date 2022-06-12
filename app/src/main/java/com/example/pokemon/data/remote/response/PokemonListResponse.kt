@@ -1,9 +1,9 @@
-package com.example.pokemon.data.remote.responses
+package com.example.pokemon.data.remote.response
 
 
 import com.google.gson.annotations.SerializedName
 
-data class PokemonList(
+data class PokemonListResponse(
     @SerializedName("count")
     val count: Int,
     @SerializedName("next")
@@ -11,5 +11,5 @@ data class PokemonList(
     @SerializedName("previous")
     val previous: Any,
     @SerializedName("results")
-    val results: List<Result>
+    val results: List<PokemonResult>
 )

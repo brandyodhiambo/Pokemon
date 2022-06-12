@@ -1,9 +1,9 @@
-package com.example.pokemon.data.remote.responses
+package com.example.pokemon.data.remote.response
 
 
 import com.google.gson.annotations.SerializedName
 
-data class Version(
+data class PokemonResult(
     @SerializedName("name")
     val name: String,
     @SerializedName("url")

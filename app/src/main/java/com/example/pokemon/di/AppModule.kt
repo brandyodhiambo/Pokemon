@@ -1,8 +1,10 @@
 package com.example.pokemon.di
 
 import com.example.pokemon.data.datasource.PokeDataSource
+import com.example.pokemon.data.datasource.PokeDataSourceImpl
 import com.example.pokemon.data.remote.PokeApi
-import com.example.pokemon.data.repository.RepositoryImpl
+import com.example.pokemon.data.repository.PokemonRepositoryImpl
+import com.example.pokemon.domain.repository.PokemonRepository
 import com.example.pokemon.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -31,14 +33,14 @@ object AppModule {
     @Provides
     @Singleton
     fun providePokeDataSource(pokeApi: PokeApi):PokeDataSource{
-        return PokeDataSource(pokeApi)
+        return PokeDataSourceImpl(pokeApi)
     }
 
     //provide repository
     @Provides
     @Singleton
-    fun providePokeRepository(pokeDataSource: PokeDataSource): RepositoryImpl{
-        return RepositoryImpl(pokeDataSource)
+    fun providePokeRepository(pokeDataSource: PokeDataSource): PokemonRepository {
+        return PokemonRepositoryImpl(pokeDataSource)
     }
 
 }
