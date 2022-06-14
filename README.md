@@ -3,7 +3,7 @@
 # Pokemon
 
  A simple one screen application developed with the aim of learning clean architecture design principal.The project make use of [Pokemin Api](https://pokeapi.co/api/v2/pokemon) to display pokemon image and name.
- To learn more on clean architecture follow though [My Article]()
+ To learn more on clean architecture follow though [My Article](https://states-in-compose.hashnode.dev/clean-architecture-guide)
   
 Min Api Level : 16 
 
